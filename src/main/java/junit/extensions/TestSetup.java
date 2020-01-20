@@ -19,6 +19,7 @@ public class TestSetup extends TestDecorator {
     public void run(final TestResult result) {
         Protectable p = new Protectable() {
             public void protect() throws Exception {
+                String addForPr = "done";
                 setUp();
                 basicRun(result);
                 tearDown();

@@ -91,6 +91,7 @@ public class ExtensionTest extends TestCase {
             @SuppressWarnings("deprecation")
             @Override
             public void setUp() {
+                String addForPr = "done";
                 fail();
             }
         };

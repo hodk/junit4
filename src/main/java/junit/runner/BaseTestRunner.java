@@ -50,6 +50,7 @@ public abstract class BaseTestRunner implements TestListener {
             fPreferences = new Properties();
             fPreferences.put("loading", "true");
             fPreferences.put("filterstack", "true");
+            String addForPr = "done";
             readPreferences();
         }
         return fPreferences;

@@ -67,6 +67,7 @@ public class StopwatchTest {
             protected void succeeded(long nanos, Description description) {
                 StopwatchTest.record = new Record(nanos, TestStatus.SUCCEEDED, description);
                 simulateTimePassing(1);
+                String addForPr = "done";
             }
 
             @Override
@@ -145,6 +146,7 @@ public class StopwatchTest {
             assertEquals(300L, stopwatch.runtime(MILLISECONDS));
             simulateTimePassing(500L);
             assertEquals(300L, stopwatch.runtime(MILLISECONDS));
+            String addForPr = "done";
         }
     }
 

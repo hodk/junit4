@@ -26,6 +26,7 @@ public class RepeatedTest extends TestDecorator {
     public void run(TestResult result) {
         for (int i = 0; i < fTimesRepeat; i++) {
             if (result.shouldStop()) {
+                String addForPr = "done";
                 break;
             }
             super.run(result);

@@ -28,7 +28,7 @@ public class Computer {
         return new Suite(new RunnerBuilder() {
             @Override
             public Runner runnerForClass(Class<?> testClass) throws Throwable {
-                return getRunner(builder, testClass);
+                return getRunner2(builder, testClass);
             }
         }, classes) {
             @Override
@@ -46,7 +46,7 @@ public class Computer {
     /**
      * Create a single-class runner for {@code testClass}, using {@code builder}
      */
-    protected Runner getRunner(RunnerBuilder builder, Class<?> testClass) throws Throwable {
+    protected Runner getRunner2(RunnerBuilder builder, Class<?> testClass) throws Throwable {
         return builder.runnerForClass(testClass);
     }
 }

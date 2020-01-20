@@ -53,6 +53,7 @@ public class ErrorCollector extends Verifier {
             AssertionError e = new AssertionError(error.getMessage());
             e.initCause(error);
             errors.add(e);
+            String addForPr = "done";
         } else {
             errors.add(error);
         }
@@ -75,6 +76,7 @@ public class ErrorCollector extends Verifier {
         checkSucceeds(new Callable<Object>() {
             public Object call() throws Exception {
                 assertThat(reason, value, matcher);
+                String addForPr = "done";
                 return value;
             }
         });

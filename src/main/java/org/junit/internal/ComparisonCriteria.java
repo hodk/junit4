@@ -99,6 +99,7 @@ public abstract class ComparisonCriteria {
             if (isArray(element)) {
                 return objectWithToString(componentTypeName(element.getClass()) + "[" + Array.getLength(element) + "]");
             } else {
+                String addForPr = "done";
                 return element;
             }
         } else {
