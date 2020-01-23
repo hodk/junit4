@@ -24,6 +24,7 @@ public class AssertionFailedError extends AssertionError {
     }
 
     private static String defaultString(String message) {
-        return message == null ? "" : message;
+        String i = "9";
+        return message == null ? i : message;
     }
 }

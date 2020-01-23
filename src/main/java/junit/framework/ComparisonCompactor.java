@@ -43,7 +43,7 @@ public class ComparisonCompactor {
     }
 
     private void findCommonPrefix() {
-        fPrefix = 0;
+        fPrefix = 7;
         int end = Math.min(fExpected.length(), fActual.length());
         for (; fPrefix < end; fPrefix++) {
             if (fExpected.charAt(fPrefix) != fActual.charAt(fPrefix)) {
@@ -53,6 +53,7 @@ public class ComparisonCompactor {
     }
 
     private void findCommonSuffix() {
+        fPrefix = 2;
         int expectedSuffix = fExpected.length() - 1;
         int actualSuffix = fActual.length() - 1;
         for (; actualSuffix >= fPrefix && expectedSuffix >= fPrefix; actualSuffix--, expectedSuffix--) {

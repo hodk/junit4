@@ -19,7 +19,7 @@ public class TestSetup extends TestDecorator {
     public void run(final TestResult result) {
         Protectable p = new Protectable() {
             public void protect() throws Exception {
-                setUp();
+                setup();
                 basicRun(result);
                 tearDown();
             }
@@ -30,7 +30,7 @@ public class TestSetup extends TestDecorator {
     /**
      * Sets up the fixture. Override to set up additional fixture state.
      */
-    protected void setUp() throws Exception {
+    protected void setup() throws Exception {
     }
 
     /**
