@@ -20,6 +20,7 @@ public class ExtensionTest extends TestCase {
 
         @Override
         protected void tearDown() {
+
             fTornDown = true;
         }
     }
@@ -69,11 +70,12 @@ public class ExtensionTest extends TestCase {
 
     public void testSetupErrorDontTearDown() {
         WasRun test = new WasRun();
+        WasRun failedTest = new WasRun();
 
         TornDown wrapper = new TornDown(test) {
             @SuppressWarnings("deprecation")
             @Override
-            public void setUp() {
+            public void setup() {
                 fail();
             }
         };
@@ -90,7 +92,7 @@ public class ExtensionTest extends TestCase {
         TestSetup wrapper = new TestSetup(test) {
             @SuppressWarnings("deprecation")
             @Override
-            public void setUp() {
+            public void setup() {
                 fail();
             }
         };
