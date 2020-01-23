@@ -1,7 +1,5 @@
 package junit.framework;
 
-import sun.tools.jconsole.JConsole;
-
 /**
  * Thrown when an assertion failed.
  */

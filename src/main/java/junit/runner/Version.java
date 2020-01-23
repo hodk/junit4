@@ -9,11 +9,10 @@ public class Version {
 	}
 
 	public static String id() {
-		return "4.13-SNAPSHOT";
+		return "4.14-SNAPSHOT";
 	}
 	
 	public static void main(String[] args) {
-		System.out.println("main");
 		System.out.println(id());
 	}
 }
